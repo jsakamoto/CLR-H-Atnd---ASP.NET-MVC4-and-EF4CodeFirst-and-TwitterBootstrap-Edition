@@ -1,0 +1,25 @@
+<configuration>
+  <configSections>
+    <section name="httpAuth" type="HttpAuth.Configuration.HttpAuthSection,HttpAuthenticationModule" />
+  </configSections>
+
+  <appSettings>
+    <add key="enableSimpleMembership" value="false"/>
+  </appSettings>
+
+  <httpAuth mode="Basic" realm="Secret">
+    <credentials source="Inline" passwordFormat="Clear">
+      <user name="guest" password="pa$$w0rd" />
+    </credentials>
+  </httpAuth>
+
+  <system.web>
+    <authentication mode="None">
+    </authentication>
+  </system.web>
+
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true">
+    </modules>
+  </system.webServer>
+</configuration>
