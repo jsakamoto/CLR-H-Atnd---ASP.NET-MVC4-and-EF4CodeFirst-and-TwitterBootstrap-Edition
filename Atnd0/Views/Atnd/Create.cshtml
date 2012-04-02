@@ -1,0 +1,54 @@
+﻿@model Atnd0.Models.Attendee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Attendee</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TwitterID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TwitterID)
+            @Html.ValidationMessageFor(model => model.TwitterID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.beParty)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.beParty)
+            @Html.ValidationMessageFor(model => model.beParty)
+        </div>
+
+        <p>
+            <input type="submit" value="Regist" />
+        </p>
+    </fieldset>
+}

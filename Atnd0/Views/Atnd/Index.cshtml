@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Atnd0.Models.Attendee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwitterID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.beParty)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwitterID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.beParty)
+        </td>
+    </tr>
+}
+
+</table>
