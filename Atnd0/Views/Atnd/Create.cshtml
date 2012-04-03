@@ -1,19 +1,14 @@
 ﻿@model Atnd0.Models.Attendee
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Regist";
 }
-
-<h2>Create</h2>
-
-<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
-<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Attendee</legend>
+        <legend>Regist Attendee</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)
@@ -48,7 +43,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Regist" />
+            <input type="submit" value="Regist" class="btn btn-primary"/>
         </p>
     </fieldset>
 }

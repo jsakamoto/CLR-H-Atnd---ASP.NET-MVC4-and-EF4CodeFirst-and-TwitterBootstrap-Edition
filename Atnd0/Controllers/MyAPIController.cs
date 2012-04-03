@@ -3,36 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using Atnd0.Models;
 
 namespace Atnd0.Controllers
 {
     public class MyAPIController : ApiController
     {
+        private AtndDB db = new AtndDB();
+
         // GET /api/myapi
-        public IEnumerable<string> Get()
+        public IQueryable<Attendee> Get()
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET /api/myapi/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST /api/myapi
-        public void Post(string value)
-        {
-        }
-
-        // PUT /api/myapi/5
-        public void Put(int id, string value)
-        {
-        }
-
-        // DELETE /api/myapi/5
-        public void Delete(int id)
-        {
+            return db.Attendees.AsQueryable();
         }
     }
 }

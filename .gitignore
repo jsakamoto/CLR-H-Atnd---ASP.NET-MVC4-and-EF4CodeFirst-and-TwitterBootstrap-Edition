@@ -1,3 +1,5 @@
 /Atnd0/obj
 /Atnd0/bin
 *.suo
+/Atnd0/App_Data/AtndDB.mdf
+/Atnd0/App_Data/AtndDB_log.ldf
