@@ -30,8 +30,8 @@ namespace Atnd0
 
             routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                routeTemplate: "api/attendees/{id}",
+                defaults: new { controller = "MyAPI", id = RouteParameter.Optional }
             );
 
             routes.MapRoute(

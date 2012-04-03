@@ -144,6 +144,7 @@
   <ItemGroup>
     <Compile Include="App_Start\DontDropDbJustCreateTablesIfModelChangedStart.cs" />
     <Compile Include="Controllers\AtndController.cs" />
+    <Compile Include="Controllers\MyAPIController.cs" />
     <Compile Include="diag.aspx.cs">
       <DependentUpon>diag.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
