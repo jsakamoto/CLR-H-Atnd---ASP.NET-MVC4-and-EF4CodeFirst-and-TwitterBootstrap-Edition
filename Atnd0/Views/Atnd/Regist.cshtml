@@ -55,7 +55,7 @@
     </p>
     <p>The URL of API is "<a href="@Url.Content("~/api/attendees")">@Url.Content("~/api/attendees")</a>."<br />
         Let's try to
-        <a href="@Url.Content("~/api/attendees?$filter ge 'N'")">filter</a>, 
+        <a href="@Url.Content("~/api/attendees?$filter=Name ge 'N'")">filter</a>, 
         <a href="@Url.Content("~/api/attendees?$top=2")">top</a>, 
         <a href="@Url.Content("~/api/attendees?$orderby=attendeeid&$skip=2")">skip</a>.
     </p>
