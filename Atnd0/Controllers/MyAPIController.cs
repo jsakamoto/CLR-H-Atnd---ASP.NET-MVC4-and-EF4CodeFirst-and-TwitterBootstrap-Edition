@@ -7,14 +7,12 @@ using Atnd0.Models;
 
 namespace Atnd0.Controllers
 {
-    public class MyAPIController : ApiController
+    public class MyApiController : ApiController
     {
-        private AtndDB db = new AtndDB();
-
-        // GET /api/myapi
+        // GET /api/attendees
         public IQueryable<Attendee> Get()
         {
-            return db.Attendees.AsQueryable();
+            return new AtndDB().Attendees;
         }
     }
 }

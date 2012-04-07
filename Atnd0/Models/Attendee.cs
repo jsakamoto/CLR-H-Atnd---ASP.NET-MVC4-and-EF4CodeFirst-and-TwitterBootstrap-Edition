@@ -13,12 +13,12 @@ namespace Atnd0.Models
         [Required, MaxLength(20)]
         public string Name { get; set; }
 
-        [Required, MaxLength(20)]
+        [Required, MaxLength(20), Display(Name="e-mail")]
         public string Email { get; set; }
 
-        [Required, MaxLength(20)]
+        [MaxLength(20), Display(Name="Twitter ID")]
         public string TwitterID { get; set; }
-
+        [Display(Name="be Party")]
         public bool beParty { get; set; }
     }
 }

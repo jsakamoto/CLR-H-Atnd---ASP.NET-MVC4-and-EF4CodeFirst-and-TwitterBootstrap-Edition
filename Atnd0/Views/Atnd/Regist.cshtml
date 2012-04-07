@@ -7,14 +7,14 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
-    <fieldset>
+    <fieldset class="form-horizontal">
         <legend>Regist Attendee</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new {autofocus=true })
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
@@ -22,15 +22,15 @@
             @Html.LabelFor(model => model.Email)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Email)
+            @Html.TextBoxFor(model => model.Email)
             @Html.ValidationMessageFor(model => model.Email)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.TwitterID)
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.TwitterID)
+        <div class="editor-field input-prepend">
+            <span class="add-on">@@</span><span>@Html.TextBoxFor(model => model.TwitterID, new {@class="span2" })</span>
             @Html.ValidationMessageFor(model => model.TwitterID)
         </div>
 
@@ -38,12 +38,12 @@
             @Html.LabelFor(model => model.beParty)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.beParty)
+            @Html.EditorFor(model => model.beParty) Yes.
             @Html.ValidationMessageFor(model => model.beParty)
         </div>
 
-        <p>
-            <input type="submit" value="Regist" class="btn btn-primary"/>
+        <p class="actions">
+            <input type="submit" value="Regist" class="btn btn-primary btn-large"/>
         </p>
     </fieldset>
 }

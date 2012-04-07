@@ -13,33 +13,33 @@ namespace Atnd0.Controllers
     {
         private AtndDB db = new AtndDB();
 
-        // GET: /Atnd/
-        public ActionResult Index()
+        // GET: /Atnd/List
+        public ActionResult List()
         {
             return View(db.Attendees.ToList());
         }
 
-        // GET: /Atnd/Create
-        public ActionResult Create()
+        // GET: /Atnd/Regist
+        public ActionResult Regist()
         {
             return View();
         }
 
-        // POST: /Atnd/Create
+        // POST: /Atnd/Regist
         [HttpPost]
-        public ActionResult Create(Attendee attendee)
+        public ActionResult Regist(Attendee attendee)
         {
             if (ModelState.IsValid)
             {
                 db.Attendees.Add(attendee);
                 db.SaveChanges();
-                return RedirectToAction("Finish");
+                return RedirectToAction("Complete");
             }
 
             return View(attendee);
         }
 
-        public ActionResult Finish()
+        public ActionResult Complete()
         {
             return View();
         }

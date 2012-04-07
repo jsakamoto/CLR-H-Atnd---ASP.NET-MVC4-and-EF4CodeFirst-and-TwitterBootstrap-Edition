@@ -31,13 +31,13 @@ namespace Atnd0
             routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/attendees/{id}",
-                defaults: new { controller = "MyAPI", id = RouteParameter.Optional }
+                defaults: new { controller = "MyApi", id = RouteParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Atnd", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "Atnd", action = "Regist", id = UrlParameter.Optional }
             );
         }
 

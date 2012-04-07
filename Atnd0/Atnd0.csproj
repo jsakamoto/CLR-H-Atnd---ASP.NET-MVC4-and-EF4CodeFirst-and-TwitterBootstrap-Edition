@@ -236,16 +236,19 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Atnd\Index.cshtml" />
+    <Content Include="Views\Atnd\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Atnd\Create.cshtml" />
+    <Content Include="Views\Atnd\Regist.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Atnd\Finish.cshtml" />
+    <Content Include="Views\Atnd\Complete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
