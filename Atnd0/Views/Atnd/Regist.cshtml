@@ -47,3 +47,16 @@
         </p>
     </fieldset>
 }
+
+<div class="well span8">
+    <p class="label">This sample site information</p>
+    <p>The URL of attendees list is "@Html.ActionLink(Url.Action("List"), "List")" (username=guest, password=pa$$w0rd).<br />
+        Let's try to import to Excel used by Web Query.
+    </p>
+    <p>The URL of API is "<a href="@Url.Content("~/api/attendees")">@Url.Content("~/api/attendees")</a>."<br />
+        Let's try to
+        <a href="@Url.Content("~/api/attendees?$filter ge 'N'")">filter</a>, 
+        <a href="@Url.Content("~/api/attendees?$top=2")">top</a>, 
+        <a href="@Url.Content("~/api/attendees?$orderby=attendeeid&$skip=2")">skip</a>.
+    </p>
+</div>
